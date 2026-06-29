@@ -1,1 +1,45 @@
-create psy.1
+n=int(input("ENTER 1 FOR ADDITION, 2 FOR SUBTRACTION, 3 FOR MULTIPLICATION, 4 FOR DIVISION: \n"))
+if n==1:
+    print("YOU HAVE SELECTED ADDITION")
+elif n==2:              
+    print("YOU HAVE SELECTED SUBTRACTION") 
+elif n==3:
+    print("YOU HAVE SELECTED MULTIPLICATION")
+elif n==4:
+    print("YOU HAVE SELECTED DIVISION")
+else:
+    print("INVALID INPUT")
+def calculate():
+    m=int(input("ENTER THE NUMBER OF VALUES TO BE CALCULATED: "))
+    if n==1:
+      sum=0
+      for i in range(m):
+        a=int(input("ENTER THE  VALUE:"))
+        sum=sum+a
+    elif n==2:
+        sum=0
+        for i in range(m):
+            a=int(input("ENTER THE  VALUE:"))
+            if i==0:
+             sum=a-sum
+            else:
+              sum=sum-a
+          
+
+    elif n==3:
+        sum=1
+        for i in range(m):
+            a=int(input("ENTER THE VALUE:"))
+            sum=sum*a
+    elif n==4:
+        sum=1
+        for i in range(m):
+            a=int(input("ENTER THE VALUE where IT IS NOT ZERO:\n"))
+            if a==0:
+                print("DIVISION BY ZERO IS NOT ALLOWED")    
+                break
+            sum=a/sum
+    return sum 
+result=calculate()    
+print("THE RESULT IS:", result) 
+
